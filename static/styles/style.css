@@ -1,31 +1,77 @@
+html {
+    font-size: 62.5%;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body::before {
+    content: "";
+    background-color: rgba(51, 51, 51, 0.6);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
 
 body {
+    position: relative;
+    font-size: 1.6rem;
     padding: 2rem;
-    background-color: #333;
-    color: whitesmoke;
     min-height: 100vh;
+    min-height: 100svh;
+    text-align: center;
+    background-image: url("../images/bg.jpg");
+    background-color: rgba(51, 51, 51, 0.6);
+    color: whitesmoke;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-bottom: 1.4rem;
+    margin-top: 1rem;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    font-size: 2rem;
-    text-align: center;
+    align-items: safe;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1.4rem;
 }
 
 input, button {
-    font-size: 2rem;
-    padding: 1rem;
+    margin-inline: auto;
+    padding: 1.2rem;
     border-radius: 10px;
+    font-weight: 600;
+    width: 80%;
+    display: block;
 }
 
-@media screen and (width < 768px) {
-    button {
-        margin-top: 1.2rem
+button {
+    background-color: orangered;
+    color: whitesmoke;
+    display: block;
+}
+
+@media screen and (width >= 48em) {
+    body {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    input, button {
+        font-size: 1.8rem;
+        width: 100%;
     }
 }
