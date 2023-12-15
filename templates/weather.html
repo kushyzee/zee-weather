@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} Weather</title>
+    <script src="https://kit.fontawesome.com/d4de644c55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
+    <ul>
+        <li>
+            <a class="home" href="/index" aria-label="home"><i class="fa-solid fa-house"></i></a>
+        </li>
+    </ul>
     <h1>{{title}} Weather</h1>
     <p>{{status}} and {{temp}} &deg;C</p>
     <p>Feels like {{feels_like}} &deg;C</p>

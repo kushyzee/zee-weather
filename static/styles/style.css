@@ -66,6 +66,15 @@ button {
     transition: all .2s linear;
 }
 
+li {
+    list-style: none;
+    text-align: left;
+}
+
+a {
+    color: orangered;
+}
+
 @media screen and (width >= 48em) {
     body {
         padding: 2rem;
@@ -76,6 +85,15 @@ button {
         font-size: 2rem;
         text-align: center;
         background-image: url("../images/desktop.jpg");
+    }
+
+    ul {
+        align-self: flex-start;
+        margin-left: 5svw;
+    }
+
+    a {
+        font-size: 2.4rem;
     }
 
     input, button {
